@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+}
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+@font-face {
+    font-family: 'PixelBug';  
+    src: url('Pixel\ Bug.otf') format('opentype');
+}
+.name{
+    font-size: 70px;
+    margin-top: 15px;
+    z-index: 10;
+    position: relative;
+    font-family: PixelBug;
+    transition: font-size 900ms ease;
+    cursor: pointer;
+}
+.name:hover{
+font-size: 76px;
+}
+.eclipse{
+    margin-top: 300px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+}
+
+.moon{
+    position: absolute;
+    height: 250px;
+    z-index: 2;
+}
+
+.sun{
+    height: 1380px;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 8px;
+    opacity: 0.8;
+}
+
+.ring1{
+    height: 600px;
+    position: absolute;
+    z-index: 5;
+    animation: rotRing1 10s linear infinite;
+}
+.ring2{
+    height: 380px;
+    position: absolute;
+    z-index: 5;
+    animation: rotRing2 14s linear infinite;
+}
+.ring3{
+    height: 220px;
+    position: absolute;
+    z-index: 5;
+    animation: rotRing3 14s linear infinite;
+    transform: rotate(45deg);
+}
+
+@keyframes rotRing1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotRing2 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes rotRing3 {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(405deg);
+    }
+}
